@@ -13,7 +13,7 @@ class ShippingServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'ggphp-shipping');
+        $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'ggphp');
 
         $this->app->register(FedExServiceProvider::class);
     }
