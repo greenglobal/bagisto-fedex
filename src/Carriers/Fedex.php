@@ -97,9 +97,8 @@ class Fedex extends AbstractShipping
                 return $rateDetails;
 
             $services = [];
-            $presentServices = explode(',', $this->getConfigData('services'));
             foreach ($rateDetails as $rateDetail) {
-                if (! empty($rateDetail['type']) && in_array($rateDetail['type'], $presentServices)) {
+                if (! empty($rateDetail['type']) && in_array($rateDetail['type'], explode(',', $this->getConfigData('services')))) {
                     $object = new CartShippingRate;
                     $object->carrier = 'fedexrate';
                     $object->carrier_title = $this->getConfigData('title');
