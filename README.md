@@ -23,7 +23,7 @@ composer dump-autoload
 ### Install with package folder
 1. Unzip all the files to **packages/GGPHP/Shipping**.
 2. Open `config/app.php` and add **GGPHP\Shipping\Providers\ShippingServiceProvider::class**.
-3. Open `composer.json` of root project and add **GGPHP\Shipping\Providers\ShippingServiceProvider::class**.
+3. Open `composer.json` of root project and add **"GGPHP\\Shipping\\": "packages/GGPHP/Shipping/src"**.
 4. Run the following command
 ```php
 composer dump-autoload
