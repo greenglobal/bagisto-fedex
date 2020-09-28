@@ -3,7 +3,7 @@ This extension used for calculating shipping rate with the FedEx services.
 
 ## Requirements
 - [Bagisto](https://github.com/bagisto/bagisto)
-- jeremy-dunn/php-fedex-api-wrapper (https://packagist.org/packages/jeremy-dunn/php-fedex-api-wrapper)
+- [jeremy-dunn/php-fedex-api-wrapper](https://packagist.org/packages/jeremy-dunn/php-fedex-api-wrapper)
 
 ## Installation
 
