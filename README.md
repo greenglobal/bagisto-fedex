@@ -1,28 +1,18 @@
 # Bagisto FeDex
 This extension used for calculating shipping rate with the FedEx services.
-
+## Features
+- Calculate shipping rate with FedEx services.
+- Track your shipment by tracking number.
 ## Requirements
-- [Bagisto](https://github.com/bagisto/bagisto)
+- [Bagisto v1.2](https://github.com/bagisto/bagisto)
+- [jeremy-dunn/php-fedex-api-wrapper](https://packagist.org/packages/jeremy-dunn/php-fedex-api-wrapper)
 
 ## Installation
-
-### Install with composer
-1. Run the following command
-```php
-composer require hunghbm/bagisto-fedex
-```
-2. Open config/app.php and add **Hunghbm\FedEx\Providers\FedExServiceProvider::class**.
-3. Run the following command
-```php
-composer dump-autoload
-```
-4. Go to `https://<your-site>/admin/configuration/sales/carriers`.
-5. Make sure that **Marketplace FedEx** is active and press save.
 
 ### Install with package folder
 1. Unzip all the files to **packages/GGPHP/Shipping**.
 2. Open `config/app.php` and add **GGPHP\Shipping\Providers\ShippingServiceProvider::class**.
-3. Open `composer.json` of root project and add **GGPHP\Shipping\Providers\ShippingServiceProvider::class**.
+3. Open `composer.json` of root project and add **"GGPHP\\Shipping\\": "packages/GGPHP/Shipping/src"**.
 4. Run the following command
 ```php
 composer dump-autoload
@@ -54,3 +44,11 @@ Your customers are now able to select the new shipping method.
 - Zip: 20171
 - City: Herndon
 - Country: US
+
+## Guide
+
+### Track your shipment by tracking number.
+- Go to `https://<your-site>/admin/sales/tracking/{tracking-number}`.
+
+### Get shipment infomations
+- Use `fedExTrackById($trackingIds)` method to get shipment infomations with `trackingIds` are tracking number array.

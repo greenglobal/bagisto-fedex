@@ -28,8 +28,8 @@ class Shipping extends ShippingWebkul
     {
         if (! $cart = Cart::getCart()) {
             return [
-              'status' => false,
-              'message' => 'No cart information',
+                'status' => false,
+                'message' => 'No cart information',
             ];
         }
 
