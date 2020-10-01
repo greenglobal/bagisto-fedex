@@ -91,7 +91,7 @@ class Fedex extends AbstractShipping
             }
 
             // Get shipping rates
-            $rateDetails = calculateShippingRates($shippingInfo);
+            $rateDetails = fedexCalculateShippingRates($shippingInfo);
 
             if (isset($rateDetails['status']) && !$rateDetails['status'])
                 return $rateDetails;
