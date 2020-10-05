@@ -5,7 +5,7 @@
 @stop
 
 @section('css')
-    <style>
+    <style type="text/css">
         .body-section {
             display: flex;
         }
