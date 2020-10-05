@@ -124,21 +124,6 @@ return [
                 'channel_based' => true,
                 'locale_based'  => true,
             ], [
-                'name'          => 'weight_unit',
-                'title'         => 'ggphp::fedex.admin.system.weight-unit',
-                'type'       => 'select',
-                'options'    => [
-                    [
-                        'title' => 'Pounds',
-                        'value' => 'LB',
-                    ], [
-                        'title' => 'Kilograms',
-                        'value' => 'KG',
-                    ]
-                ],
-                'channel_based' => true,
-                'locale_based'  => true,
-            ], [
                 'name'          => 'services',
                 'title'         => 'ggphp::fedex.admin.system.services',
                 'type'          => 'multiselect',

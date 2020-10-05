@@ -49,8 +49,9 @@
 
             // Package 1
             $rateRequest->RequestedShipment->RequestedPackageLineItems[0]->Weight->Value = $data['package']['weight'];
+            $weightUnits = core()->getConfigData('general.general.locale_options.weight_unit') ?? '';
             $rateRequest->RequestedShipment->RequestedPackageLineItems[0]->Weight->Units =
-                core()->getConfigData('sales.carriers.fedexrate.weight_unit') ??  FedEx\RateService\SimpleType\WeightUnits::_LB;
+                $weightUnits == 'kgs' ? FedEx\RateService\SimpleType\WeightUnits::_KG : FedEx\RateService\SimpleType\WeightUnits::_LB;
             $rateRequest->RequestedShipment->RequestedPackageLineItems[0]->Dimensions->Length = $data['package']['length'];
             $rateRequest->RequestedShipment->RequestedPackageLineItems[0]->Dimensions->Width = $data['package']['width'];
             $rateRequest->RequestedShipment->RequestedPackageLineItems[0]->Dimensions->Height = $data['package']['height'];
