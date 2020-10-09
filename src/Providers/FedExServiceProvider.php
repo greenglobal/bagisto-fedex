@@ -16,7 +16,7 @@ class FedExServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        include __DIR__ . '/../Http/helpers.php';
+        include __DIR__ . '/../Http/fedex.php';
     }
 
     /**

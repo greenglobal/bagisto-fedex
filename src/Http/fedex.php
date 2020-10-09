@@ -122,6 +122,7 @@
 
             // Track shipments
             $trackRequest->SelectionDetails = [];
+
             foreach ($trackingIds as $key => $trackingId) {
                 $trackRequest->SelectionDetails[] = new FedEx\TrackService\ComplexType\TrackSelectionDetail();
                 $trackRequest->SelectionDetails[$key]->PackageIdentifier->Value = $trackingId;
@@ -133,6 +134,7 @@
             $response = $request->getTrackReply($trackRequest);
 
             $trackReplyDetails = [];
+
             if (! empty($response) && $response->HighestSeverity == 'SUCCESS' && ! empty($response->CompletedTrackDetails)) {
                 foreach ($response->CompletedTrackDetails as $trackReplyDetail) {
                     if (! empty($notification = $trackReplyDetail->TrackDetails[0]->Notification->Severity) && $notification == 'SUCCESS') {
