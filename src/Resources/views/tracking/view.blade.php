@@ -45,9 +45,6 @@
                     {{ __('ggphp::fedex.admin.system.tracking-title') }} #{{ $trackingId }}
                 </h1>
             </div>
-
-            <div class="page-action">
-            </div>
         </div>
 
         <div class="page-content">
