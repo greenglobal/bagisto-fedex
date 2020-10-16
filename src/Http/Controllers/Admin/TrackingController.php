@@ -1,6 +1,6 @@
 <?php
 
-namespace GGPHP\Shipping\Http\Controllers\Tracking;
+namespace GGPHP\Shipping\Http\Controllers\Admin;
 
 use Webkul\Admin\Http\Controllers\Controller;
 

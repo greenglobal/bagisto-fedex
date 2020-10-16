@@ -1,0 +1,100 @@
+@import "font";
+
+.sale-container.tracking {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    strong {
+        display: block;
+        font-weight: bolder;
+    }
+    .tracking-info, .process-bar {
+        width: 50%;
+        display: inline-block;
+    }
+    .tracking-info {
+        .box {
+            margin-bottom: 20px;
+            .box-title {
+                font-size: 17px;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 12px;
+            }
+        }
+    }
+    .process-bar {
+        .events {
+            li {
+                display: flex;
+                &.delivered {
+                    color: #ff6600;
+                }
+            }
+            margin-left: 60px;
+        }
+        .time {
+            width: 150px;
+            position: relative;
+            color: #777;
+            padding: 0 24px;
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                right: 0;
+                top: 0;
+                transform: translateX(50%);
+                border-radius: 50%;
+                background: #fff;
+                border: 1px #ccc solid;
+                width: 16px;
+                height: 16px;
+            }
+            &.checked::after {
+                background: #21a179;
+                border: 1px #21a179 solid;
+            }
+        }
+        .address {
+            padding: 0 22px 22px 22px;
+            width: 400px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                height: 100%;
+                border-left: 1px #ccc solid;
+            }
+            &.checked::before {
+                border-left: 1px #21a179 solid;
+            }
+        }
+    }
+}
+
+.main-container-wrapper {
+    .account-table-content {
+        .table {
+            tr {
+                td.actions {
+                    a {
+                        padding: 0 2px;
+                    }
+                }
+            }
+            .icon-truck {
+                &:before {
+                    font-size: 22px;
+                    left: 12px;
+                    position: relative;
+                }
+            }
+        }
+    }
+    .header-tracking {
+        margin-top: 30px;
+    }
+}

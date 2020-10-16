@@ -69,6 +69,9 @@ return [
             'status-detail-and-service' => 'Status Detail and Service',
             'no-data' => 'No data',
             'city' => 'City',
+            'tracking-id' => 'Tracking ID',
+            'order-id' => 'Order ID',
+            'trackings-title' => 'Trackings',
         ]
     ]
 ];

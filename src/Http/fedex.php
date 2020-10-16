@@ -136,9 +136,9 @@
             $trackReplyDetails = [];
 
             if (! empty($response) && $response->HighestSeverity == 'SUCCESS' && ! empty($response->CompletedTrackDetails)) {
-                foreach ($response->CompletedTrackDetails as $trackReplyDetail) {
+                foreach ($response->CompletedTrackDetails as $key => $trackReplyDetail) {
                     if (! empty($notification = $trackReplyDetail->TrackDetails[0]->Notification->Severity) && $notification == 'SUCCESS') {
-                        foreach ($trackReplyDetail->TrackDetails as $key => $trackDetail) {
+                        foreach ($trackReplyDetail->TrackDetails as $trackDetail) {
                             $trackReplyDetails[$key]['trackingId'] = $trackDetail->TrackingNumber ?? '';
                             $trackReplyDetails[$key]['trackingNumberUniqueIdentifier'] =
                                 $trackDetail->TrackingNumberUniqueIdentifier ?? '';
