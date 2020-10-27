@@ -3,7 +3,7 @@
 return [
     [
         'key'    => 'sales.carriers.fedexrate',
-        'name'   => 'ggphp-shipping::app.admin.system.fedex-rate-shipping',
+        'name'   => 'ggphp::fedex.admin.system.fedex-rate-shipping',
         'sort'   => 6,
         'fields' => [
             [
@@ -27,20 +27,6 @@ return [
                 'channel_based' => true,
                 'locale_based'  => false,
             ], [
-                'name'       => 'type',
-                'title'      => 'admin::app.admin.system.type',
-                'type'       => 'select',
-                'options'    => [
-                    [
-                        'title' => 'Per Unit',
-                        'value' => 'per_unit',
-                    ], [
-                        'title' => 'Per Order',
-                        'value' => 'per_order',
-                    ]
-                ],
-                'validation' => 'required'
-            ], [
                 'name'          => 'active',
                 'title'         => 'admin::app.admin.system.status',
                 'type'          => 'boolean',
@@ -49,41 +35,41 @@ return [
                 'locale_based'  => true,
             ], [
                 'name'          => 'account_ID',
-                'title'         => 'ggphp-shipping::app.admin.system.account-ID',
+                'title'         => 'ggphp::fedex.admin.system.account-ID',
                 'type'          => 'text',
                 'validation'    => 'required',
                 'channel_based' => true,
                 'locale_based'  => true,
             ], [
                 'name'          => 'meter_number',
-                'title'         => 'ggphp-shipping::app.admin.system.meter-number',
+                'title'         => 'ggphp::fedex.admin.system.meter-number',
                 'type'          => 'text',
                 'validation'    => 'required',
                 'channel_based' => true,
                 'locale_based'  => true,
             ], [
                 'name'          => 'key',
-                'title'         => 'ggphp-shipping::app.admin.system.key',
+                'title'         => 'ggphp::fedex.admin.system.key',
                 'type'          => 'text',
                 'validation'    => 'required',
                 'channel_based' => true,
                 'locale_based'  => true,
             ], [
                 'name'          => 'password',
-                'title'         => 'ggphp-shipping::app.admin.system.password',
+                'title'         => 'ggphp::fedex.admin.system.password',
                 'type'          => 'password',
                 'validation'    => 'required',
                 'channel_based' => true,
                 'locale_based'  => true,
             ], [
                 'name'          => 'production_mode',
-                'title'         => 'ggphp-shipping::app.admin.system.production-mode',
+                'title'         => 'ggphp::fedex.admin.system.production-mode',
                 'type'          => 'boolean',
                 'channel_based' => false,
                 'locale_based'  => true,
             ], [
                 'name'          => 'packaging_type',
-                'title'         => 'ggphp-shipping::app.admin.system.packaging-type',
+                'title'         => 'ggphp::fedex.admin.system.packaging-type',
                 'type'          => 'select',
                 'options'    => [
                     [
@@ -124,23 +110,8 @@ return [
                 'channel_based' => true,
                 'locale_based'  => true,
             ], [
-                'name'          => 'weight_unit',
-                'title'         => 'ggphp-shipping::app.admin.system.weight-unit',
-                'type'       => 'select',
-                'options'    => [
-                    [
-                        'title' => 'Pounds',
-                        'value' => 'LB',
-                    ], [
-                        'title' => 'Kilograms',
-                        'value' => 'KG',
-                    ]
-                ],
-                'channel_based' => true,
-                'locale_based'  => true,
-            ], [
                 'name'          => 'services',
-                'title'         => 'ggphp-shipping::app.admin.system.services',
+                'title'         => 'ggphp::fedex.admin.system.services',
                 'type'          => 'multiselect',
                 'options'    => [
                     [
@@ -179,7 +150,7 @@ return [
                 'locale_based'  => true,
             ], [
                 'name'          => 'length_class',
-                'title'         => 'ggphp-shipping::app.admin.system.length-class',
+                'title'         => 'ggphp::fedex.admin.system.length-class',
                 'type'          => 'select',
                 'options'    => [
                     [
